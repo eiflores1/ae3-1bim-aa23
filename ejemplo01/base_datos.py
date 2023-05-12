@@ -3,4 +3,4 @@
 """
 import sqlite3
 
-conn = sqlite3.connect('base_Eduardo.db')
+conn = sqlite3.connect('base_Jugador.db')
