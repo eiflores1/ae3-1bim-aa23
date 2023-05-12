@@ -14,10 +14,20 @@ cursor = conn.cursor()
 
 # Crear una cadena que almacene la sentencia de ingreso de información
 # se recuerda los atributos: nombre, apellido, cedula, edad
-nombre = "Eduardo"
-apellido = "Flores"
-cedula = "1011019123"
-edad = 32
+nombre = "LOJACITY"
+apellido = "SAS"
+cedula = "1103213615001"
+edad = 1
+cadena_sql = """INSERT INTO Autor (nombre, apellido, cedula, edad) \
+VALUES ('%s', '%s', '%s', %d);""" % (nombre, apellido, cedula, edad)
+
+# ejecutar el SQL
+cursor.execute(cadena_sql)
+
+nombre = "LEONES"
+apellido = "FC"
+cedula = "1103213617001"
+edad = 2
 cadena_sql = """INSERT INTO Autor (nombre, apellido, cedula, edad) \
 VALUES ('%s', '%s', '%s', %d);""" % (nombre, apellido, cedula, edad)
 

@@ -14,27 +14,26 @@ cursor = conn.cursor()
 
 # Crear una cadena que almacene la sentencia de ingreso de información
 # se recuerda los atributos: nombre, apellido, cedula, edad
-nombre = "Andrés Vinicio"
-apellido = "Jara Vinces"
-cedula = "1011019091"
-edad = 30
+nombre = "LOJACITY"
+apellido = "SAS"
+cedula = "1103213615001"
+edad = 1
 cadena_sql = """INSERT INTO Autor (nombre, apellido, cedula, edad) \
 VALUES ('%s', '%s', '%s', %d);""" % (nombre, apellido, cedula, edad)
 
 # ejecutar el SQL
 cursor.execute(cadena_sql)
 
-# nuevo registo
-nombre = "Ana Salas"
+nombre = "LEONES"
+apellido = "FC"
+cedula = "1103213617001"
+edad = 2
 cadena_sql = """INSERT INTO Autor (nombre, apellido, cedula, edad) \
 VALUES ('%s', '%s', '%s', %d);""" % (nombre, apellido, cedula, edad)
+
+# ejecutar el SQL
 cursor.execute(cadena_sql)
 
-# nuevo registo
-nombre = "Marco Barcia"
-cadena_sql = """INSERT INTO Autor (nombre, apellido, cedula, edad) \
-VALUES ('%s', '%s', '%s', %d);""" % (nombre, apellido, cedula, edad)
-cursor.execute(cadena_sql)
 
 # confirmar los cambios a través del objeto importado de tip Connection
 conn.commit()
